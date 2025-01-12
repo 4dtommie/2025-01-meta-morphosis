@@ -1,0 +1,60 @@
+/* detail.css */
+
+body {
+  max-width: 1025px;
+  margin: 0 auto;;
+}
+
+.topic-list {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+  }
+  
+  .topic-header {
+    cursor: pointer;
+    border-bottom: 1px solid #ccc; /* Subtle separator */
+    padding: 10px;
+    margin: 0;
+    transition: all .2s ease-in-out; /* Smooth transitions for active class */
+  
+  }
+  .topic-header:hover {
+      background-color: #ddd;
+  }
+  
+  
+  .topic-content {
+    display: none; /* Initially hidden */
+    overflow: hidden;
+    padding: 1em;
+    height: 0;  /* Initial state: collapsed */ /* Use max-height to enable transitions */
+}
+  
+  .topic-content p {
+    margin: 1em 0;
+  }
+
+  .topic-content p:first-of-type {
+    margin-top: 0;
+  }
+
+  .topic-list .active .topic-content {
+      height: auto; /* Adjust max-height to ensure smooth transition */
+      display: block;
+  }
+  
+  
+  .topic-list .active {
+      background-color: #ddd;
+  }
+  
+  quote {
+    width: 80%;
+    padding: .5em;
+    display: block;
+    border: 1px solid #3498db;
+  }
+
+  quote + quote {
+    margin-top: 1em;
+  }

@@ -1,0 +1,137 @@
+* { box-sizing: border-box; }
+
+/* alegreya-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Alegreya';
+    font-style: normal;
+    font-weight: 400;
+    src: url('alegreya-v36-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* alegreya-800 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Alegreya';
+    font-style: normal;
+    font-weight: 800;
+    src: url('alegreya-v36-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+body {
+  background: #EEE;
+  padding: .675em;
+  font-size: 1em;
+  font-weight: 400;
+  font-family: "Alegreya", 'Times New Roman', Times, serif;
+}
+
+
+.grid {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.grid-item {
+  transition: all 0.2s ease; /* Add transition for smooth animation */
+  
+  padding: 0.5em;
+  border-radius: 12px;
+  
+  border: 1px solid silver;
+  margin-bottom: .5em;
+  min-height: 110px;
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Push button to bottom */
+}
+
+.grid-item .button-container { /* Container for better vertical centering */
+    align-self: flex-end; /* Align button to the right */
+    width: 100%;
+    border-bottom-right-radius: inherit; /* match the grid-item's curve*/
+    border-bottom-left-radius: inherit; /* match the grid-item's curve*/
+}
+
+.grid-item .grid-item-button {
+    display: block;
+    padding: 0.4em 0.5em;
+    text-align: center;
+    text-decoration: none; /* Remove underline from link */
+    background-color: #3498db; /* Example button color */
+    color: white;
+    font-weight: 800;
+    border-radius: 0.5em;
+    cursor: pointer; /* Add pointer cursor on hover */
+    transition: all 0.2s ease; /* Transition for button color */
+}
+
+.grid-item:hover {
+  background-color: white;
+  border-color: white;
+}
+
+.grid-item:hover .grid-item-button {
+  background-color: #29487d;  /* Darker blue on hover */
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.item-main {
+    border: none;
+    background-color: #ccc;
+}
+
+.grid-sizer,
+.grid-item { 
+    width: 48%;
+}
+
+.gutter-sizer {
+    width: 2.8%;
+}
+
+@media only screen and (min-width: 555px) {
+  /* 5 columns for larger screens */
+  .grid-sizer, .grid-item { width: 30%; }
+
+  .grid-item { margin-bottom: 1em; }
+
+  body { font-size: 1.1em;}
+}
+
+@media only screen and (min-width: 768px) {
+  /* 5 columns for larger screens */
+  .grid-sizer, .grid-item { width: 22%; }
+
+  .grid-item { margin-bottom: 1.3em; }
+
+  body { font-size: 1.2em;}
+}
+
+@media only screen and (min-width: 1024px) {
+  /* 5 columns for larger screens */
+  .grid-sizer, .grid-item { min-height: 200px; width: 22%; }
+  
+  .grid-item { margin-bottom: 1.4em; }
+  
+  body { font-size: 1.35em;}
+  
+  .analytics-badge { position: absolute;
+    bottom: 1em; left: 1em;
+    }
+}
+
+
+
+/* 2 columns wide */
+.grid-item--wide { width: 60%; }
+
+
