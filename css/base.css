@@ -124,7 +124,7 @@ body {
   
   body { font-size: 1.35em;}
   
-  .analytics-badge { position: absolute;
+  .analytics-badge { position: statics;
     bottom: 1em; left: 1em;
     }
 }
