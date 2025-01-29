@@ -53,7 +53,7 @@ h2 {
 .carousel {
   display: flex;
   padding: 0 0 4px 0;
-  gap: 3em; /* Space between items */
+  gap: 2em; /* Space between items */
   overflow-x: scroll;
   -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
@@ -74,7 +74,7 @@ h2 {
 }
 
 .carousel-item:first-child {
-  margin-left: 5em;
+  margin-left: 3em;
 }
 
 .carousel-item img {
@@ -136,6 +136,14 @@ button.switch:hover {
   display: none;
 }
 
+.language {
+  margin: 2em 0;
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+  
+}
+
 @media (min-width: 768px) { /* Adjust the max width as needed for your case */
   .optional {
     display: inline;
@@ -143,9 +151,7 @@ button.switch:hover {
   footer {
     flex-direction: row;
     justify-content: center; /* Centers items horizontally */
-    gap: 2em;
-
-    
+    gap: 2em; 
   }
 }
 
