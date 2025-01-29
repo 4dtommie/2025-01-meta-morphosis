@@ -123,18 +123,25 @@ carousel.addEventListener('mousemove', (e) => {
     // Determine the current site path
     const currentPath = window.location.pathname;
 
-    // Check the user's language preference
-    if (userLang.startsWith(englishCode) && currentPath !== '/') {
-        const redirectToEnglish = confirm('Your preferred language is English. Would you like to switch to the English site?');
-        if (redirectToEnglish) {
-            window.location.href = '/';
+    // Check local storage flag
+    const langCheckDone = localStorage.getItem('langCheckDone');
+
+    if (!langCheckDone) {
+        if (userLang.startsWith(englishCode) && currentPath !== '/') {
+            const redirectToEnglish = confirm('Your preferred language is English. Would you like to switch to the English site?');
+            if (redirectToEnglish) {
+                window.location.href = '/';
+            }
+        } else if (userLang.startsWith(dutchCode) && currentPath !== '/nl/') {
+            const redirectToDutch = confirm('Uw voorkeurstaal is Nederlands. Wilt u overstappen naar de Nederlandse site?');
+            if (redirectToDutch) {
+                window.location.href = '/nl/';
+            }
         }
-    } else if (userLang.startsWith(dutchCode) && currentPath !== '/nl/') {
-        const redirectToDutch = confirm('Uw voorkeurstaal is Nederlands. Wilt u overstappen naar de Nederlandse site?');
-        if (redirectToDutch) {
-            window.location.href = '/nl/';
-        }
+        // Set flag to prevent repeated checks
+        localStorage.setItem('langCheckDone', 'true');
     }
+
 </script>
 
     <!-- 100% privacy-first analytics -->
