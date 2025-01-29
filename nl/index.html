@@ -75,7 +75,7 @@
     <button class="switch">Ik weet het... help me er vanaf 😰</button>
 </footer>
 
-<div class="language"><a href="/?lang=en" title="Heb jij ook vrienden of familie die Facebook, Instagram, Whatsapp of X verlaten?">In English 🇬🇧</a></div>
+<div class="language"><a href="/" title="Heb jij ook vrienden of familie die Facebook, Instagram, Whatsapp of X verlaten?">In English 🇬🇧</a></div>
 
 <script>
  const carousel = document.querySelector('.carousel');
@@ -113,43 +113,29 @@ carousel.addEventListener('mousemove', (e) => {
     </script>
 
 <script>
-   function redirectBasedOnLanguage() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const setLang = urlParams.get('lang');
+    // Get user's language
+    const userLang = navigator.language || navigator.userLanguage;
 
-    // If a language is set in the URL, store it in local storage and redirect accordingly
-    if (setLang) {
-      localStorage.setItem('setLang', setLang);
-      if (setLang === 'nl') {
-        window.location.href = '/nl/';
-      } else if (setLang === 'en') {
-        window.location.href = '/';
-      }
-      // Add more conditions for other languages if needed
-      return;
+    // Define the language codes for English and Dutch
+    const englishCode = 'en';
+    const dutchCode = 'nl';
+
+    // Determine the current site path
+    const currentPath = window.location.pathname;
+
+    // Check the user's language preference
+    if (userLang.startsWith(englishCode) && currentPath !== '/') {
+        const redirectToEnglish = confirm('Your preferred language is English. Would you like to switch to the English site?');
+        if (redirectToEnglish) {
+            window.location.href = '/';
+        }
+    } else if (userLang.startsWith(dutchCode) && currentPath !== '/nl/') {
+        const redirectToDutch = confirm('Uw voorkeurstaal is Nederlands. Wilt u overstappen naar de Nederlandse site?');
+        if (redirectToDutch) {
+            window.location.href = '/nl/';
+        }
     }
-
-    // Try to use language stored in local storage
-    const storedLang = localStorage.getItem('setLang');
-    if (storedLang) {
-      if (storedLang === 'nl') {
-        window.location.href = '/nl/';
-      } else if (storedLang === 'en') {
-        window.location.href = '/';
-      }
-      return;
-    }
-
-    // If no set language, use the user's browser language
-    const userLang = navigator.language || navigator.languages[0];
-    if (userLang.startsWith('nl')) {
-      window.location.href = '/nl/';
-    }
-  }
-
-  // Call redirect function upon page load
-  window.onload = redirectBasedOnLanguage;
-  </script>
+</script>
 
     <!-- 100% privacy-first analytics -->
 <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
