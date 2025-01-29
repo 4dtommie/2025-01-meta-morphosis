@@ -19,7 +19,7 @@
   }
 
 body {
-  background: #AFAFAF;
+  background: #F5F5F5;
   font-size: 1em;
   font-weight: 400;
   font-family: "Alegreya", 'Times New Roman', Times, serif;
@@ -46,14 +46,14 @@ h2 {
 .carousel-container {
   overflow: hidden;
   width: 100%;
-  background-color: #d3d3d3;
-  padding: 2em 0;
+  background-color: #AFAFAF;
+  padding: 3em 0;
 }
 
 .carousel {
   display: flex;
   padding: 0 0 4px 0;
-  gap: 1em; /* Space between items */
+  gap: 3em; /* Space between items */
   overflow-x: scroll;
   -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
@@ -66,11 +66,15 @@ h2 {
 .carousel-item {
   flex: 0 0 auto; /* Prevent shrinking */
     min-width: 200px;
-    margin: 0 1em;
+    margin: 0;
     border-radius: 0.5em;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     user-select: none; /* Prevent image selection */
     -webkit-user-select: none;
+}
+
+.carousel-item:first-child {
+  margin-left: 5em;
 }
 
 .carousel-item img {
@@ -80,6 +84,7 @@ h2 {
 
 footer {
   padding: 3em 0;
+  width: 100%;
   display: flex;  /* Enables flexbox layout */
   flex-direction: column; /* Stacks children vertically */
   align-items: center; /* Optional: Center-align buttons */
@@ -92,7 +97,7 @@ button {
   background-color: #3498db;  /* Light blue */
   color: white;
   border: none;
-  padding: .875em 1.25em;
+  padding: .75em 1.5em;
   font-family: "Alegreya", 'Times New Roman', Times, serif;
   font-weight: 600;
   font-size: 2em;
@@ -134,6 +139,13 @@ button.switch:hover {
 @media (min-width: 768px) { /* Adjust the max width as needed for your case */
   .optional {
     display: inline;
+  }
+  footer {
+    flex-direction: row;
+    justify-content: center; /* Centers items horizontally */
+    gap: 2em;
+
+    
   }
 }
 
