@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-display: swap;
+    font-family: 'Alegreya';
+    font-style: normal;
+    font-weight: 400;
+  src: url('alegreya-v36-latin-regular.woff2') format('woff2');
+  }
+
+  @font-face {
+  font-display: swap;
+    font-family: 'Alegreya';
+    font-style: normal;
+    font-weight: 800;
+  src: url('alegreya-v36-latin-800.woff2') format('woff2');
+  }
+
+body {
+  background: #AFAFAF;
+  font-size: 1em;
+  font-weight: 400;
+  font-family: "Alegreya", 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 3em 1em;
+}
+
+h1 {
+  font-size: 3.5em;
+  text-align: center;
+  color: #222;
+}
+
+h2 {
+  font-size: 2em;
+  text-align: center;
+  font-weight: 400;
+}
+
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+  background-color: #d3d3d3;
+  padding: 2em 0;
+}
+
+.carousel {
+  display: flex;
+  padding: 0 0 4px 0;
+  gap: 1em; /* Space between items */
+  overflow-x: scroll;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
+
+.carousel-item {
+  flex: 0 0 auto; /* Prevent shrinking */
+    min-width: 200px;
+    margin: 0 1em;
+    border-radius: 0.5em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    user-select: none; /* Prevent image selection */
+    -webkit-user-select: none;
+}
+
+.carousel-item img {
+  border-radius: 8px;
+  display: block;
+}
+
+footer {
+  padding: 3em 0;
+  display: flex;  /* Enables flexbox layout */
+  flex-direction: column; /* Stacks children vertically */
+  align-items: center; /* Optional: Center-align buttons */
+}
+
+button {
+  position: relative;
+  margin-bottom: 1em;
+  display: block;
+  background-color: #3498db;  /* Light blue */
+  color: white;
+  border: none;
+  padding: .875em 1.25em;
+  font-family: "Alegreya", 'Times New Roman', Times, serif;
+  font-weight: 600;
+  font-size: 2em;
+  border-radius: .875em;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 8px #1c598a; /* Darker blue */
+  transition: all 0.2s ease;
+}
+
+button.cta:hover {
+  box-shadow: 0 10px #0d2e49; /* Darker blue */
+}
+
+button.cta:active {
+  transform: translateY(3px); /* Move down on click */
+  box-shadow: 0 2px #3498db; /* Darker blue */
+}
+
+.switch {
+  background-color: #e0e0e0;  /* Light gray */
+  color: #2c3e50;  /* Darker text color */
+  font-size: 1.5em;
+  border-radius: 20px;  /* Rounded corners */
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+}
+
+button.switch:hover {
+  background-color: #d0d0d0;  /* Slightly darker on hover */
+}
+
+.optional {
+  display: none;
+}
+
+@media (min-width: 768px) { /* Adjust the max width as needed for your case */
+  .optional {
+    display: inline;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+body {font-size: 12px;}
+}
+
+@media only screen and (max-width: 700px) {
+  body {font-size: 9px;}
+  button { font-size: 3em; }
+  button.switch { font-size: 2em; }
+}
+
+@media only screen and (max-width: 400px) {
+  body {font-size: 8px;}
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta charset="UTF-8">
+
+<title>Why leave Meta?</title>
+<link rel="stylesheet" href="/css/new-base.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👀</text></svg>">
+
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+</head>
+<body>
+
+    <header>
+    <h1>Any friends or family leaving Facebook,<span class="optional"><br/></span>
+        Instagram, Whatsapp&nbsp;or&nbsp;Twitter?</h1>
+
+    <h2>Curious what’s up and want to make up your mind?</h2>
+</header>
+
+<div class="carousel-container">
+    <div class="carousel">
+        <div class="carousel-item"><img draggable="false" src="https://placehold.co/225x180" alt="Image 1"></div>
+        <div class="carousel-item"><img draggable="false" src="https://placehold.co/300x180" alt="Image 2"></div>
+        <div class="carousel-item"><img draggable="false" src="https://placehold.co/300x180" alt="Image 3"></div>
+        <div class="carousel-item"><img draggable="false" src="https://placehold.co/225x180" alt="Image 1"></div>
+        <div class="carousel-item"><img draggable="false" src="https://placehold.co/300x180" alt="Image 2"></div>
+        <div class="carousel-item"><img draggable="false" src="https://placehold.co/300x180" alt="Image 3"></div>
+        <!-- Add more items as needed -->
+    </div>
+</div>
+
+<footer>
+    <button class="cta">Show me what's up 😧</button>
+    <button class="switch">I already know... help me switch 😰</button>
+</footer>
+
+
+
+
+<script>
+ const carousel = document.querySelector('.carousel');
+
+let isDragging = false;
+let startX;
+let scrollLeft;
+
+carousel.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    carousel.style.cursor = 'grabbing';
+    startX = e.pageX - carousel.offsetLeft;
+    scrollLeft = carousel.scrollLeft;
+    console.log(`Drag started: startX = ${startX}, scrollLeft = ${scrollLeft}`);
+});
+
+carousel.addEventListener('mouseleave', () => {
+    isDragging = false;
+    carousel.style.cursor = 'grab';
+});
+
+carousel.addEventListener('mouseup', () => {
+    isDragging = false;
+    carousel.style.cursor = 'grab';
+});
+
+carousel.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - carousel.offsetLeft;
+    const walk = (x - startX) * 2; // Adjust for speed
+    console.log(`Dragging: x = ${x}, walk = ${walk}`);
+    carousel.scrollLeft = scrollLeft - walk;
+});
+    </script>
+
+    <!-- 100% privacy-first analytics -->
+<script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<script async src="https://scripts.simpleanalyticscdn.com/auto-events.js"></script>
+</body>
+</html>
