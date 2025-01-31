@@ -14,7 +14,7 @@ body {
   text-align: left;;
   border-radius: .75em;
   padding: 1em 1.5em;
-  width: 95%;
+  width: 90%;
   max-width: 900px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 4em;
@@ -32,24 +32,22 @@ h1 {
 
 .container h2 {
   margin: 0;
-  font-weight: 800;
+  font-variation-settings: "ital" 0, "wdth" 90, "wght" 800;
   font-size: 2.5em;
   text-align: left;
 }
 
 h3 {
   font-size: 1.5em;
-  font-weight: 400;
+  font-variation-settings: "ital" 0, "wdth" 100, "wght" 400;
 }
 
 h4 {
   font-size: 1.5em;
   color: #7E7E7E;
   margin: 0;
+  font-variation-settings: "ital" 0, "wdth" 80, "wght" 600;
 }
-
-
-
 
 p {
   font-size: 1.125em;
@@ -154,8 +152,8 @@ a:active, a:visited:active {
     color: white;
     border: none;
     padding: .75em 1.5em;
-    font-family: "Alegreya", 'Times New Roman', Times, serif;
-    font-weight: 600;
+    font-family: pf-grand-gothik-variable, sans-serif;
+    font-variation-settings: "ital" 0, "wdth" 60, "wght" 600;
     font-size: 2em;
     border-radius: .875em;
     cursor: pointer;
@@ -169,9 +167,8 @@ a:active, a:visited:active {
   }
   
   @media only screen and (max-width: 700px) {
-    body {font-size: 11px;}
-  }
-
-  @media only screen and (max-width: 400px) {
-    body {font-size: 10px;}
-  }
+    body {font-size: 12px;}
+    p, a, a:visited {font-size: 16px; line-height: 22px; }
+    h1 {font-size: 3em;}
+    .container h2 { font-size: 2.5em; }
+    }

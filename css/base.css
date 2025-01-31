@@ -27,7 +27,8 @@ h1 {
 h2 {
   font-size: 2em;
   text-align: center;
-  font-weight: 400;
+  font-variation-settings: "ital" 0, "wdth" 90, "wght" 600;
+  color:#444;
 }
 
 .carousel-container {
@@ -104,6 +105,7 @@ button {
 button.cta:hover {
   box-shadow: 0 10px #0d2e49; /* Darker blue */
   background-color: #2372a7;
+  font-variation-settings: "ital" 0, "wdth" 111, "wght" 1200;
 }
 
 button.cta:active {
