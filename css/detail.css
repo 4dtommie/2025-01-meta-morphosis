@@ -1,9 +1,80 @@
-/* detail.css */
-
 body {
-  max-width: 1025px;
-  margin: 0 auto;;
+  background-color: #0077b6;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  text-align: center;
+  flex-direction: column;
 }
+
+.container {
+  background-color: #f1f1f1;
+  text-align: left;;
+  border-radius: .75em;
+  padding: 1em 1.5em;
+  width: 80%;
+  max-width: 900px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 4em;
+}
+
+h1 {
+  max-width: 1000px;
+  color: white;
+}
+
+.container h2 {
+  margin: 0;
+  font-weight: 800;
+  font-size: 2.5em;
+  text-align: left;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 1.5em;
+  color: #7E7E7E;
+  margin: 0;
+}
+
+
+
+
+p {
+  font-size: 1.125em;
+  color: #272727;
+}
+
+a, a:visited {
+  color:#0077b6;
+  font-size: 1.125em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:active, a:visited:active {
+  text-decoration: underline;
+}
+
+.event {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.event:hover {
+  background-color: #e7e7e7;
+}
+
 
 .topic-list {
     list-style: none; /* Remove default bullet points */
@@ -15,6 +86,7 @@ body {
     border-bottom: 1px solid #ccc; /* Subtle separator */
     padding: 10px;
     margin: 0;
+    color: #3b3b3b;
     transition: all .2s ease-in-out; /* Smooth transitions for active class */
   
   }
@@ -58,3 +130,26 @@ body {
   quote + quote {
     margin-top: 1em;
   }
+
+  button {
+    position: relative;
+    margin-bottom: 1em;
+    display: block;
+    background-color: #3ABE5F;  /* Light blue */
+    color: white;
+    border: none;
+    padding: .75em 1.5em;
+    font-family: "Alegreya", 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-size: 2em;
+    border-radius: .875em;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 8px #167A32; /* Darker blue */
+    transition: all 0.2s ease;
+  }
+  
+  button.cta:hover {
+    box-shadow: 0 10px #167A32; /* Darker blue */
+  }
+  
