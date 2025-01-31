@@ -2,27 +2,13 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-display: swap;
-    font-family: 'Alegreya';
-    font-style: normal;
-    font-weight: 400;
-  src: url('alegreya-v36-latin-regular.woff2') format('woff2');
-  }
-
-  @font-face {
-  font-display: swap;
-    font-family: 'Alegreya';
-    font-style: normal;
-    font-weight: 800;
-  src: url('alegreya-v36-latin-800.woff2') format('woff2');
-  }
 
 body {
   background: #F5F5F5;
   font-size: 1em;
   font-weight: 400;
-  font-family: "Alegreya", 'Times New Roman', Times, serif;
+  font-family: pf-grand-gothik-variable, sans-serif;
+  font-variation-settings: "ital" 0, "wdth" 100, "wght" 300;
   margin: 0;
   padding: 0;
 }
@@ -34,6 +20,7 @@ header {
 h1 {
   font-size: 3.5em;
   text-align: center;
+  font-variation-settings: "ital" 0, "wdth" 80, "wght" 800;
   color: #222;
 }
 
@@ -82,6 +69,12 @@ h2 {
   display: block;
 }
 
+a img {
+  pointer-events: none;
+  -webkit-user-drag: none;
+  user-drag: none; /* For supported browsers */
+}
+
 footer {
   padding: 3em 0;
   width: 100%;
@@ -97,11 +90,11 @@ button {
   background-color: #3498db;  /* Light blue */
   color: white;
   border: none;
-  padding: .75em 1.5em;
-  font-family: "Alegreya", 'Times New Roman', Times, serif;
-  font-weight: 600;
-  font-size: 2em;
-  border-radius: .875em;
+  padding: .3em 1em .5em 1em;
+  font-family: pf-grand-gothik-variable, sans-serif;
+  font-variation-settings: "ital" 0, "wdth" 60, "wght" 800;
+  font-size: 2.8em;
+  border-radius: .5em;
   cursor: pointer;
   outline: none;
   box-shadow: 0 8px #1c598a; /* Darker blue */
@@ -110,6 +103,7 @@ button {
 
 button.cta:hover {
   box-shadow: 0 10px #0d2e49; /* Darker blue */
+  background-color: #2372a7;
 }
 
 button.cta:active {
@@ -121,15 +115,21 @@ button.cta:active {
   background-color: #e0e0e0;  /* Light gray */
   color: #2c3e50;  /* Darker text color */
   font-size: 1.5em;
-  border-radius: 20px;  /* Rounded corners */
+  font-variation-settings: "ital" 0, "wdth" 60, "wght" 600;
+  border-radius: .5em;  /* Rounded corners */
   cursor: pointer;
   outline: none;
   transition: background-color 0.3s ease;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+  box-shadow: 0 8px #8b8b8b; /* Darker blue */
 }
 
 button.switch:hover {
-  background-color: #d0d0d0;  /* Slightly darker on hover */
+  background-color: #c5c5c5;  /* Slightly darker on hover */
+}
+
+button.switch:active {
+  transform: translateY(3px); /* Move down on click */
+  box-shadow: 0 2px #464646; /* Darker blue */
 }
 
 a {

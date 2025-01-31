@@ -4,8 +4,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta charset="UTF-8">
 
-<title>Waarom verlaten mensen Facebook, Instagram, Whatsapp of X verlaten?</title>
-<link rel="stylesheet" href="/css/new-base.css?v=1">
+<title>Waarom verlaten mensen Facebook, Instagram, Whatsapp of X?</title>
+<link rel="stylesheet" href="/css/base.css?v=1">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👀</text></svg>">
 
 </head>
@@ -21,7 +21,7 @@
 <div class="carousel-container">
     <div class="carousel">
         <div class="carousel-item">
-            <img 
+            <a draggable="false" href="https://www.consumentenbond.nl/internet-privacy/signal-goed-alternatief-voor-whatsapp"><img 
                 draggable="false" 
                 src="/images/nl-1.png" 
                 srcset="
@@ -29,49 +29,52 @@
                     /images/nl-1@2x.png 2x
                 " 
                 alt="Description of the first image">
+            </a>
         </div>
 
         <div class="carousel-item">
-            <img 
+            <a draggable="false" href="https://mastodon.social/@sylv_a/113866786740212465"><img 
                 draggable="false" 
                 src="/images/nl-2.png" 
                 srcset="
                     /images/nl-2.png 1x, 
                     /images/nl-2@2x.png 2x
                 " 
-                alt="Description of the second image">
+                alt="Description of the second image"></a>
         </div>
 
         <div class="carousel-item">
-            <img 
+            <a draggable="false" href="https://www.nrc.nl/nieuws/2025/01/15/gaat-u-ook-van-x-of-meta-af-a4879586"><img 
                 draggable="false" 
                 src="/images/nl-3.png" 
                 srcset="
                     /images/nl-3.png 1x, 
                     /images/nl-3@2x.png 2x
                 " 
-                alt="Description of the third image">
+                alt="Description of the third image"></a>
         </div>
 
         <div class="carousel-item">
-            <img 
+            <a draggable="false" href="https://npo.nl/npo3/3vraagt/flink-deel-jongeren-overweegt-instagram-facebook-en-x-te-verwijderen-vanwege-gedrag-musk-en-zuckerberg"><img 
                 draggable="false" 
                 src="/images/nl-5.png" 
                 srcset="
                     /images/nl-5.png 1x, 
                     /images/nl-5@2x.png 2x
                 " 
-                alt="Description of the fifth image">
+                alt="Description of the fifth image"></a>
         </div>
 
-        <div class="carousel-item"><img draggable="false" src="/images/nl-6.png" alt="Description of fourth image"></div>
-        <div class="carousel-item"><img draggable="false" src="/images/nl-7.png" alt="Description of fifth image"></div>
+        <div class="carousel-item"><a draggable="false" href="https://www.waag.org/nl/article/marleen-stikker-vpro-tegenlicht-bescherm-je-mobiel-voor-big-tech/"><img draggable="false" src="/images/nl-6.png" alt="Description of fourth image"></a></div>
+        <div class="carousel-item"><a draggable="false" href="https://www.waag.org/nl/article/waag-futurelab-lanceert-gezamenlijke-campagne-makesocialssocialagain/"><img draggable="false" src="/images/nl-7.png" alt="Description of fifth image"></a></div>
         <!-- Add more items as needed -->
     </div>
 </div>
 
 <footer>
-    <button class="cta">Laat me zien wat er mis is 😧</button>
+    <a href="/en/whats-up/">
+        <button class="cta">Laat me zien wat er mis is 😧</button>
+    </a>
     <button class="switch">Ik weet het... help me er vanaf 😰</button>
 </footer>
 
@@ -110,6 +113,7 @@ carousel.addEventListener('mousemove', (e) => {
     console.log(`Dragging: x = ${x}, walk = ${walk}`);
     carousel.scrollLeft = scrollLeft - walk;
 });
+
     </script>
 
 <script>
