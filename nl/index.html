@@ -5,7 +5,8 @@
 <meta charset="UTF-8">
 
 <title>Waarom verlaten mensen Facebook, Instagram, Whatsapp of X?</title>
-<link rel="stylesheet" href="/css/base.css?v=1">
+<link rel="stylesheet" href="/css/base.css?v=3">
+<link rel="stylesheet" href="https://use.typekit.net/gjo3yqn.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👀</text></svg>">
 
 </head>
@@ -73,9 +74,11 @@
 
 <footer>
     <a href="/en/whats-up/">
-        <button class="cta">Laat me zien wat er mis is 😧</button>
+        <button class="cta">Waarom zou ik dit doen? 😧</button>
     </a>
-    <button class="switch">Ik weet het... help me er vanaf 😰</button>
+    <a href="/en/whats-up/">
+        <button class="switch">Hoe kom ik van mijn socials af? 😰</button>
+    </a>
 </footer>
 
 <div class="language"><a href="/" title="Heb jij ook vrienden of familie die Facebook, Instagram, Whatsapp of X verlaten?">In English 🇬🇧</a></div>
@@ -115,38 +118,6 @@ carousel.addEventListener('mousemove', (e) => {
 });
 
     </script>
-
-<script>
-    // Get user's language
-    const userLang = navigator.language || navigator.userLanguage;
-
-    // Define the language codes for English and Dutch
-    const englishCode = 'en';
-    const dutchCode = 'nl';
-
-    // Determine the current site path
-    const currentPath = window.location.pathname;
-
-    // Check local storage flag
-    const langCheckDone = localStorage.getItem('langCheckDone');
-
-    if (!langCheckDone) {
-        if (userLang.startsWith(englishCode) && currentPath !== '/') {
-            const redirectToEnglish = confirm('Your preferred language is English. Would you like to switch to the English site?');
-            if (redirectToEnglish) {
-                window.location.href = '/';
-            }
-        } else if (userLang.startsWith(dutchCode) && currentPath !== '/nl/') {
-            const redirectToDutch = confirm('Uw voorkeurstaal is Nederlands. Wilt u overstappen naar de Nederlandse site?');
-            if (redirectToDutch) {
-                window.location.href = '/nl/';
-            }
-        }
-        // Set flag to prevent repeated checks
-        localStorage.setItem('langCheckDone', 'true');
-    }
-
-</script>
 
     <!-- 100% privacy-first analytics -->
 <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
