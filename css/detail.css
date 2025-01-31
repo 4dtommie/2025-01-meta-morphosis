@@ -14,10 +14,15 @@ body {
   text-align: left;;
   border-radius: .75em;
   padding: 1em 1.5em;
-  width: 80%;
+  width: 95%;
   max-width: 900px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 4em;
+}
+
+
+header a, header a:visited {
+  color: white;
 }
 
 h1 {
@@ -80,7 +85,7 @@ a:active, a:visited:active {
     list-style: none; /* Remove default bullet points */
     padding: 0;
   }
-  
+
   .topic-header {
     cursor: pointer;
     border-bottom: 1px solid #ccc; /* Subtle separator */
@@ -119,6 +124,16 @@ a:active, a:visited:active {
   .topic-list .active {
       background-color: #ddd;
   }
+
+  .chevron {
+    transition: transform 0.3s ease;
+    display: inline-block;
+  }
+  
+  .topic-list .active .chevron {
+    transform: rotate(90deg); /* Rotate the chevron */
+    transform-origin: center center;
+  }
   
   quote {
     width: 80%;
@@ -153,3 +168,10 @@ a:active, a:visited:active {
     box-shadow: 0 10px #167A32; /* Darker blue */
   }
   
+  @media only screen and (max-width: 700px) {
+    body {font-size: 11px;}
+  }
+
+  @media only screen and (max-width: 400px) {
+    body {font-size: 10px;}
+  }
