@@ -9,6 +9,10 @@ body {
   flex-direction: column;
 }
 
+body.switching {
+  background-color: #3ABE5F;
+}
+
 .container {
   background-color: #f1f1f1;
   text-align: left;;
@@ -96,6 +100,10 @@ a:active, a:visited:active {
   .topic-header:hover {
       background-color: #ddd;
   }
+
+  li:last-of-type .topic-header {
+    border: none;
+  }
   
   
   .topic-content {
@@ -163,6 +171,7 @@ a:active, a:visited:active {
   }
   
   button.cta:hover {
+    background-color: #309c4f;
     box-shadow: 0 10px #167A32; /* Darker blue */
   }
   
