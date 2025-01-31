@@ -5,8 +5,8 @@
 <meta charset="UTF-8">
 
 <title>Let's make the switch!</title>
-<link rel="stylesheet" href="/css/base.css?v=3">
-<link rel="stylesheet" href="/css/detail.css?v=3">
+<link rel="stylesheet" href="/css/base.css?v=4">
+<link rel="stylesheet" href="/css/detail.css?v=4">
 <link rel="stylesheet" href="https://use.typekit.net/gjo3yqn.css">
 
 
@@ -16,7 +16,7 @@
 <body class="switching">
 
     <header>
-        <a href="/">⬅️ Back to home</a>
+        <a href="#" onclick="window.history.back()">⬅️ Previous page</a>
         <h1>Great choice, <br/>you want to make the switch!</h1>
     </header>
 
@@ -71,7 +71,8 @@
 
     <div class="container">
         <h2>What are some alternatives? 🔍</h2>
-        <h4>Some responses to frequently heard arguments.</h4>
+        <h4>Popular alternatives are listed below.<br/> 
+           Do you have additional suggestions?<br/>   <a href="/en/sad-trombone/">Send them in!</a></h4>
         <ul class="topic-list">
             <li>
                 <h3 class="topic-header">Mastodon, a community and social networking</h3>
@@ -106,8 +107,11 @@
           </ul>
     </div>
 
-<div class="language"><a href="/nl/" title="Heb jij ook vrienden of familie die Facebook, Instagram, Whatsapp of X verlaten?">In het Nederlands 🇳🇱</a></div>
-
+    <footer>
+        <a href="/en/sad-trombone/">
+            <button class="switch">Thanks for this! But I do have some feedback 🔊</button>
+        </a>
+    </footer>
 
 <script src="/js/detail.js"></script>
 <!-- 100% privacy-first analytics -->
