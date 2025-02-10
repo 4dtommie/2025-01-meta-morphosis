@@ -13,6 +13,26 @@ body {
   padding: 0;
 }
 
+menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; 
+  gap: 2em; 
+  background-color: lightgray;
+  height: 3em; 
+  width: 100%; 
+  padding: 0.5em 2em; 
+  margin: 0;
+}
+
+menu a {
+  font-variation-settings: "ital" 0, "wdth" 100, "wght" 400;
+  text-decoration: none;
+  color: black; 
+  line-height: 2em; 
+  display: inline-block; 
+}
+
 header {
   padding: 3em 1em;
 }
@@ -36,10 +56,18 @@ h2 {
   width: 100%;
   background-color: #AFAFAF;
   padding: 3em 0;
+  margin-bottom: 4em;
+  flex: 0 0 auto; /* Prevent shrinking */
+}
+
+.switching .carousel-container {
+  background-color: #0b7b32;
 }
 
 .carousel {
   display: flex;
+  height: auto;
+  user-select: none;
   padding: 0 0 4px 0;
   gap: 2em; /* Space between items */
   overflow-x: scroll;
@@ -52,7 +80,7 @@ h2 {
 }
 
 .carousel-item {
-  flex: 0 0 auto; /* Prevent shrinking */
+    flex: 0 0 auto; /* Prevent shrinking */
     min-width: 200px;
     margin: 0;
     border-radius: 0.5em;

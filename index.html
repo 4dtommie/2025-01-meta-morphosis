@@ -13,6 +13,11 @@
 </head>
 <body>
 
+<menu>
+    <a href="/nl/" title="Heb jij ook vrienden of familie die Facebook, Instagram, Whatsapp of X verlaten?">In Dutch 🇳🇱</a>
+    <a href="/en/about/" title="About this website">About this website</a>
+</menu>
+
     <header>
     <h1>Any friends or family leaving Facebook,<span class="optional"><br/></span>
         Instagram, Whatsapp&nbsp;or&nbsp;Twitter?</h1>
@@ -82,7 +87,7 @@
     </a>
 </footer>
 
-<div class="language"><a href="/nl/" title="Heb jij ook vrienden of familie die Facebook, Instagram, Whatsapp of X verlaten?">In het Nederlands 🇳🇱</a></div>
+
 
 <script>
  const carousel = document.querySelector('.carousel');
@@ -96,7 +101,6 @@ carousel.addEventListener('mousedown', (e) => {
     carousel.style.cursor = 'grabbing';
     startX = e.pageX - carousel.offsetLeft;
     scrollLeft = carousel.scrollLeft;
-    console.log(`Drag started: startX = ${startX}, scrollLeft = ${scrollLeft}`);
 });
 
 carousel.addEventListener('mouseleave', () => {
@@ -114,7 +118,6 @@ carousel.addEventListener('mousemove', (e) => {
     e.preventDefault();
     const x = e.pageX - carousel.offsetLeft;
     const walk = (x - startX) * 2; // Adjust for speed
-    console.log(`Dragging: x = ${x}, walk = ${walk}`);
     carousel.scrollLeft = scrollLeft - walk;
 });
     </script>

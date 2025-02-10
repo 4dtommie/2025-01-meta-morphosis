@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="theme-color" content="#3ABE5F">
+
+<title>About Metamorphosis</title>
+<link rel="stylesheet" href="/css/base.css?v=4">
+<link rel="stylesheet" href="/css/detail.css?v=4">
+<link rel="stylesheet" href="https://use.typekit.net/gjo3yqn.css">
+
+
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👀</text></svg>">
+
+</head>
+<body class="switching">
+
+    <header>
+        <a href="#" onclick="window.history.back()">⬅️ Previous page </a>
+        <h1>Meta-morphosis, <br/>the switch to privacy-first apps 🌱</h1>
+    </header>
+
+    <div class="container">
+        <h4>
+            I started this website as a small explainer to friends & family to read more about why I left WhatsApp. That got a little out of hand as hobby projects tend to go. I hope you find it useful, if you're missing something or have any feedback, please let me know.</h4>
+        <ul class="topic-list">
+
+            <li>
+                <h3 class="topic-header"><span class="chevron">▸</span> Want to help develop this website?</h3>
+                <div class="topic-content">
+                    <p>This website is open source. You can find the source code on <a href="https://github.com/4dtommie/2025-01-meta-morphosis">GitHub</a> and if you want you can help me add languages, features or info.</p>
+                </div>
+            </li>
+            <li>
+                <h3 class="topic-header"><span class="chevron">▸</span> Want to share some feedback?</h3>
+                <div class="topic-content">
+                    <p>You can leave any comments at <a href="/en/sad-trombone/">the feedback form</a>.</p>
+                </div>
+            </li>
+            <li>
+                <h3 class="topic-header"><span class="chevron">▸</span> Find me online</h3>
+                <div class="topic-content">
+                    <p>You can find me on <a href="https://phanpy.social/#/mograph.social/a/113805379990100269">Mastodon</a>.</p>
+                </div>
+            </li>
+          </ul>
+    </div>
+
+    <div class="carousel-container">
+    <div class="carousel">
+        <div class="carousel-item">
+            <a target="_blank" draggable="false" href="https://signal.org"><img
+                draggable="false"
+                src="/images/signal.png"
+                srcset="
+                    /images/signal.png 1x,
+                    /images/signal@2x.png 2x
+                "
+                alt="Switch to Signal">
+            </a>
+        </div>
+
+        <div class="carousel-item">
+            <a target="_blank" draggable="false" href="https://joinmastodon.org"><img
+                draggable="false"
+                src="/images/mastodon.png"
+                srcset="
+                    /images/mastodon.png 1x,
+                    /images/mastodon@2x.png 2x
+                "
+                alt="Switch to Mastodon"></a>
+        </div>
+
+        <div class="carousel-item">
+            <a target="_blank" draggable="false" href="https://pixelfed.org"><img
+                draggable="false"
+                src="/images/pixelfed.png"
+                srcset="
+                    /images/pixelfed.png 1x,
+                    /images/pixelfed@2x.png 2x
+                "
+                alt="Switch to Pixelfed"></a>
+        </div>
+
+        <div class="carousel-item">
+            <a target="_blank" draggable="false" href="https://friendi.ca"><img
+                draggable="false"
+                src="/images/friendica.png"
+                srcset="
+                    /images/friendica.png 1x,
+                    /images/friendica@2x.png 2x
+                "
+                alt="Switch to Friendica"></a>
+        </div>
+
+        <div class="carousel-item">
+            <a target="_blank" draggable="false" href="https://joinpeertube.org"><img
+                draggable="false" src="/images/peertube.png" 
+                srcset="
+                    /images/peertube.png 1x,
+                    /images/peertube@2x.png 2x
+                "
+                alt="Switch to PeerTube"></a>
+            </div>
+    </div>
+</div>
+
+
+    <script>
+        const carousel = document.querySelector('.carousel');
+       
+       let isDragging = false;
+       let startX;
+       let scrollLeft;
+       
+       carousel.addEventListener('mousedown', (e) => {
+           isDragging = true;
+           carousel.style.cursor = 'grabbing';
+           startX = e.pageX - carousel.offsetLeft;
+           scrollLeft = carousel.scrollLeft;
+       });
+       
+       carousel.addEventListener('mouseleave', () => {
+           isDragging = false;
+           carousel.style.cursor = 'grab';
+       });
+       
+       carousel.addEventListener('mouseup', () => {
+           isDragging = false;
+           carousel.style.cursor = 'grab';
+       });
+       
+       carousel.addEventListener('mousemove', (e) => {
+           if (!isDragging) return;
+           e.preventDefault();
+           const x = e.pageX - carousel.offsetLeft;
+           const walk = (x - startX) * 2; // Adjust for speed
+           carousel.scrollLeft = scrollLeft - walk;
+       });
+           </script>
+
+
+<script src="/js/detail.js"></script>
+<!-- 100% privacy-first analytics -->
+<script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<script async src="https://scripts.simpleanalyticscdn.com/auto-events.js"></script>
+</body>
+</html>
