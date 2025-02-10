@@ -77,6 +77,67 @@
     </ul>
 </div>
 
+
+<div class="carousel-container">
+    <div class="carousel">
+        <div class="carousel-item">
+            <a target="_blank" draggable="false" href="https://signal.org"><img
+                draggable="false"
+                src="/images/signal.png"
+                srcset="
+                    /images/signal.png 1x,
+                    /images/signal@2x.png 2x
+                "
+                alt="Switch to Signal">
+            </a>
+        </div>
+
+        <div class="carousel-item">
+            <a target="_blank" draggable="false" href="https://joinmastodon.org"><img
+                draggable="false"
+                src="/images/mastodon.png"
+                srcset="
+                    /images/mastodon.png 1x,
+                    /images/mastodon@2x.png 2x
+                "
+                alt="Switch to Mastodon"></a>
+        </div>
+
+        <div class="carousel-item">
+            <a target="_blank" draggable="false" href="https://pixelfed.org"><img
+                draggable="false"
+                src="/images/pixelfed.png"
+                srcset="
+                    /images/pixelfed.png 1x,
+                    /images/pixelfed@2x.png 2x
+                "
+                alt="Switch to Pixelfed"></a>
+        </div>
+
+        <div class="carousel-item">
+            <a target="_blank" draggable="false" href="https://friendi.ca"><img
+                draggable="false"
+                src="/images/friendica.png"
+                srcset="
+                    /images/friendica.png 1x,
+                    /images/friendica@2x.png 2x
+                "
+                alt="Switch to Friendica"></a>
+        </div>
+
+        <div class="carousel-item">
+            <a target="_blank" draggable="false" href="https://joinpeertube.org"><img
+                draggable="false" src="/images/peertube.png" 
+                srcset="
+                    /images/peertube.png 1x,
+                    /images/peertube@2x.png 2x
+                "
+                alt="Switch to PeerTube"></a>
+            </div>
+    </div>
+</div>
+
+
     <div class="container">
     <h2>Wat zijn enkele alternatieven? 🔍</h2>
     <h4>Populaire alternatieven worden hieronder vermeld.<br/> 
@@ -120,7 +181,38 @@
     </a>
 </footer>
 
-<div class="language"><a href="/en/make-the-switch/">In English 🇬🇧</a></div>
+<script>
+    const carousel = document.querySelector('.carousel');
+   
+   let isDragging = false;
+   let startX;
+   let scrollLeft;
+   
+   carousel.addEventListener('mousedown', (e) => {
+       isDragging = true;
+       carousel.style.cursor = 'grabbing';
+       startX = e.pageX - carousel.offsetLeft;
+       scrollLeft = carousel.scrollLeft;
+   });
+   
+   carousel.addEventListener('mouseleave', () => {
+       isDragging = false;
+       carousel.style.cursor = 'grab';
+   });
+   
+   carousel.addEventListener('mouseup', () => {
+       isDragging = false;
+       carousel.style.cursor = 'grab';
+   });
+   
+   carousel.addEventListener('mousemove', (e) => {
+       if (!isDragging) return;
+       e.preventDefault();
+       const x = e.pageX - carousel.offsetLeft;
+       const walk = (x - startX) * 2; // Adjust for speed
+       carousel.scrollLeft = scrollLeft - walk;
+   });
+</script>
 
 <script src="/js/detail.js"></script>
 <!-- 100% privacy-first analytics -->
